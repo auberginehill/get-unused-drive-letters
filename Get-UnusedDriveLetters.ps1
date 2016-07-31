@@ -592,7 +592,32 @@ Display the help file.
 Set-ExecutionPolicy remotesigned
 This command is altering the Windows PowerShell rights to enable script execution. Windows PowerShell 
 has to be run with elevated rights (run as an administrator) to actually be able to change the script 
-execution properties. The default value is "Set-ExecutionPolicy restricted". For more information, 
+execution properties. The default value is "Set-ExecutionPolicy restricted". 
+
+
+    Parameters:
+
+    Restricted      Does not load configuration files or run scripts. Restricted is the default 
+                    execution policy.
+
+    AllSigned       Requires that all scripts and configuration files be signed by a trusted 
+                    publisher, including scripts that you write on the local computer.
+
+    RemoteSigned    Requires that all scripts and configuration files downloaded from the Internet 
+                    be signed by a trusted publisher.
+
+    Unrestricted    Loads all configuration files and runs all scripts. If you run an unsigned  
+                    script that was downloaded from the Internet, you are prompted for permission  
+                    before it runs.
+
+    Bypass          Nothing is blocked and there are no warnings or prompts.
+
+    Undefined       Removes the currently assigned execution policy from the current scope.  
+                    This parameter will not remove an execution policy that is set in a Group 
+                    Policy scope. 
+
+
+For more information, 
 type "help Set-ExecutionPolicy -Full" or visit https://technet.microsoft.com/en-us/library/hh849812.aspx.
 
 .EXAMPLE
