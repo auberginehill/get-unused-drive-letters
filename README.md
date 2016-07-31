@@ -186,11 +186,41 @@
                 <p>
                     <li><code>help ./Get-UnusedDriveLetters -Full</code><br />
                     Display the help file.</li>
-                </p>
                 <p>
                     <li><code>Set-ExecutionPolicy remotesigned</code><br />
-                    This command is altering the Windows PowerShell rights to enable script execution. Windows PowerShell has to be run with elevated rights (run as an administrator) to actually be able to change the script execution properties. The default value is "<code>Set-ExecutionPolicy restricted</code>".<br /> 
-                    For more information, type "<code>help Set-ExecutionPolicy -Full</code>" or visit <a href="https://technet.microsoft.com/en-us/library/hh849812.aspx">Set-ExecutionPolicy</a>.</li>
+                    This command is altering the Windows PowerShell rights to enable script execution. Windows PowerShell has to be run with elevated rights (run as an administrator) to actually be able to change the script execution properties. The default value is "<code>Set-ExecutionPolicy restricted</code>".
+                        <p>Parameters:
+                                <ol>
+                                    <table>
+                                        <tr>
+                                            <td style="padding:6px"><code>Restricted</code></td>
+                                            <td style="padding:6px">Does not load configuration files or run scripts. Restricted is the default execution policy.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:6px"><code>AllSigned</code></td>
+                                            <td style="padding:6px">Requires that all scripts and configuration files be signed by a trusted publisher, including scripts that you write on the local computer.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:6px"><code>RemoteSigned</code></td>
+                                            <td style="padding:6px">Requires that all scripts and configuration files downloaded from the Internet be signed by a trusted publisher.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:6px"><code>Unrestricted</code></td>
+                                            <td style="padding:6px">Loads all configuration files and runs all scripts. If you run an unsigned script that was downloaded from the Internet, you are prompted for permission before it runs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:6px"><code>Bypass</code></td>
+                                            <td style="padding:6px">Nothing is blocked and there are no warnings or prompts.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:6px"><code>Undefined</code></td>
+                                            <td style="padding:6px">Removes the currently assigned execution policy from the current scope. This parameter will not remove an execution policy that is set in a Group Policy scope.</td>
+                                        </tr>
+                                    </table>
+                                </ol>
+                        </p>
+                    For more information, type "<code>help Set-ExecutionPolicy -Full</code>" or visit <a href="https://technet.microsoft.com/en-us/library/hh849812.aspx">Set-ExecutionPolicy</a>.
+                    </li>
                 </p>
                 <p>
                     <li><code>New-Item -ItemType File -Path C:\Temp\Get-UnusedDriveLetters.ps1</code><br />
