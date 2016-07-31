@@ -342,7 +342,7 @@ ForEach ($computer in $name_list) {
             } # ForEach ($volume}
 
 
-    # Enumerate the used drive-letter
+    # Enumerate the used drive-letters
     
     # $pi = Get-PSDrive -PSProvider FileSystem
     $epsilon = [System.IO.DriveInfo]::getdrives() 
@@ -463,7 +463,7 @@ Add-Content $txt_file_unused -Value $separator
 Add-Content $txt_file_unused -Value $unused
 
 
-# Display the results in two pop-up windows
+# Display the results in four pop-up windows
 # $obj_osinfo_selection | Out-GridView
 # $optical_selection | Out-GridView
 $partition_table_selection | Out-GridView
