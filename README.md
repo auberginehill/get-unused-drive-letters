@@ -187,8 +187,8 @@
                     <li><code>help ./Get-UnusedDriveLetters -Full</code><br />
                     Display the help file.</li>
                 <p>
-                    <li><code>Set-ExecutionPolicy remotesigned</code><br />
-                    This command is altering the Windows PowerShell rights to enable script execution. Windows PowerShell has to be run with elevated rights (run as an administrator) to actually be able to change the script execution properties. The default value is "<code>Set-ExecutionPolicy restricted</code>".
+                    <li><p><code>Set-ExecutionPolicy remotesigned</code><br />
+                    This command is altering the Windows PowerShell rights to enable script execution. Windows PowerShell has to be run with elevated rights (run as an administrator) to actually be able to change the script execution properties. The default value is "<code>Set-ExecutionPolicy restricted</code>".</p>
                         <p>Parameters:
                                 <ol>
                                     <table>
@@ -219,7 +219,7 @@
                                     </table>
                                 </ol>
                         </p>
-                    For more information, type "<code>help Set-ExecutionPolicy -Full</code>" or visit <a href="https://technet.microsoft.com/en-us/library/hh849812.aspx">Set-ExecutionPolicy</a>.
+                    <p>For more information, type "<code>help Set-ExecutionPolicy -Full</code>" or visit <a href="https://technet.microsoft.com/en-us/library/hh849812.aspx">Set-ExecutionPolicy</a>.</p>
                     </li>
                 </p>
                 <p>
@@ -301,7 +301,7 @@
  <table>
     <tr>
         <th><img class="emoji" title="www" alt="www" height="28" width="28" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0023-20e3.png"></th>
-        <td style="padding:6px"></td>
+        <td style="padding:6px">Stéphane van Gulick: <a href="https://gallery.technet.microsoft.com/Get-WindowsUpdates-06eb7f43">Get-WindowsUpdates</a></td>
     </tr>
     <tr>
         <th rowspan="5"></th>
