@@ -277,10 +277,10 @@
         <td style="padding:6px"><a href="http://learningpcs.blogspot.com/2011/10/powershell-get-wmiobject-and.html">Powershell - Get-WmiObject and ASSOCIATORS OF Statement</a></td>
     </tr>
     <tr>
-        <td style="padding:6px"><a href="https://social.technet.microsoft.com/Forums/windowsserver/en-US/f82e6f0b-ab97-424b-8e91-508d710e03b1/how-to-link-the-output-from-win32diskdrive-and-win32volume?forum=winserverpowershell"></a></td>
+        <td style="padding:6px"><a href="https://social.technet.microsoft.com/Forums/windowsserver/en-US/f82e6f0b-ab97-424b-8e91-508d710e03b1/how-to-link-the-output-from-win32diskdrive-and-win32volume?forum=winserverpowershell">How to link the output from win32_diskdrive and win32_volume</a></td>
     </tr>
     <tr>
-        <td style="padding:6px"><a href="https://technet.microsoft.com/en-us/library/ff730960.aspx">How to link the output from win32_diskdrive and win32_volume</a></td>
+        <td style="padding:6px"><a href="https://technet.microsoft.com/en-us/library/ff730960.aspx">Windows PowerShell Tip of the Week: More Fun with Dates (and Times)</a></td>
     </tr>
     <tr>
         <td style="padding:6px"><a href="https://blogs.msdn.microsoft.com/dsadsi/2010/03/19/mapping-volumeid-to-disk-partition-using-the-deviceiocontrol-api/">Mapping VolumeID to Disk partition Using the DeviceIOControl API</a></td>
@@ -301,11 +301,11 @@
  <table>
     <tr>
         <th><img class="emoji" title="www" alt="www" height="28" width="28" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0023-20e3.png"></th>
-        <td style="padding:6px">Stéphane van Gulick: <a href="https://gallery.technet.microsoft.com/Get-WindowsUpdates-06eb7f43">Get-WindowsUpdates</a></td>
+        <td style="padding:6px"><a href="https://github.com/auberginehill/get-computer-info">Get-ComputerInfo</a></td>
     </tr>
     <tr>
         <th rowspan="5"></th>
-        <td style="padding:6px"></td>
+        <td style="padding:6px">Stéphane van Gulick: <a href="https://gallery.technet.microsoft.com/Get-WindowsUpdates-06eb7f43">Get-WindowsUpdates</a></td>
     </tr>
     <tr>
         <td style="padding:6px"></td>
