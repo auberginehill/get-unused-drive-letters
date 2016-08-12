@@ -162,10 +162,12 @@ ForEach ($computer in $name_list) {
                         'Operating System'      = $OperatingSystem_data
                         'Architecture'          = $os.OSArchitecture
                         'SP Version'            = $os.CSDVersion
+                        'Build Number'          = $os.BuildNumber
                         'Memory'                = (ConvertBytes($compsys.TotalPhysicalMemory))        
                         'Processors'            = $processor.NumberOfLogicalProcessors
+                        'Cores'                 = $processor.NumberOfCores
                         'Country Code'          = $os.CountryCode
-                        'Install Date'          = ($os.ConvertToDateTime($os.InstallDate)).ToShortDateString()
+                        'OS Install Date'       = ($os.ConvertToDateTime($os.InstallDate)).ToShortDateString()
                         'Last BootUp'           = (($os.ConvertToDateTime($os.LastBootUpTime)).ToShortDateString() + ' ' + ($os.ConvertToDateTime($os.LastBootUpTime)).ToShortTimeString())
                         'UpTime'                = (Uptime)
                         'Date'                  = $date
@@ -175,7 +177,7 @@ ForEach ($computer in $name_list) {
                         'Time (Current)'        = (Get-Date).ToShortTimeString()
                         'Time (Normal)'         = (((Get-Date).AddMinutes($timezone.DaylightBias)).ToShortTimeString() + ' (' + $timezone.StandardName + ')') 
                         'Daylight In Effect'    = $compsys.DaylightInEffect
-                    #  'Daylight In Effect'    = (Get-Date).IsDaylightSavingTime()
+                     #  'Daylight In Effect'    = (Get-Date).IsDaylightSavingTime()
                         'Time Zone'             = $timezone.Description
                         'OS Version'            = $os.Version        
                         'BIOS Version'          = $bios.SMBIOSBIOSVersion  
@@ -185,7 +187,7 @@ ForEach ($computer in $name_list) {
                         'UUID'                  = $compsysprod.UUID
                     } # New-Object
                 $obj_osinfo.PSObject.TypeNames.Insert(0,"OSInfo")
-                $obj_osinfo_selection = $obj_osinfo | Select-Object 'Computer','Manufacturer','Computer Model','System Type','CPU','Operating System','Architecture','SP Version','Memory','Processors','Country Code','Install Date','Last BootUp','UpTime','Date','Daylight Bias','Time Offset (Current)','Time Offset (Normal)','Time (Current)','Time (Normal)','Daylight In Effect','Time Zone','OS Version','BIOS Version','Serial Number (BIOS)','Serial Number (OS)','UUID'
+                $obj_osinfo_selection = $obj_osinfo | Select-Object 'Computer','Manufacturer','Computer Model','System Type','CPU','Operating System','Architecture','SP Version','Build Number','Memory','Processors','Cores','Country Code','OS Install Date','Last BootUp','UpTime','Date','Daylight Bias','Time Offset (Current)','Time Offset (Normal)','Time (Current)','Time (Normal)','Daylight In Effect','Time Zone','OS Version','BIOS Version','Serial Number (BIOS)','Serial Number (OS)','UUID'
                 Write-Output $obj_osinfo_selection
                 $empty_line | Out-String
                 $empty_line | Out-String
@@ -407,8 +409,8 @@ $empty_line | Out-String
 
 
 # Display the partition table in console
-$partition_table_selection = $partition_table | Select-Object Computer,Drive,Label,'File System','Boot Partition',Interface,'Media Type','Partition Type',Partition,Used,'Used (%)','Free Space Status','Total Size','Free Space','Free (%)'
-$partition_table_selection_screen = $partition_table | Select-Object Computer,Drive,Label,Interface,'Media Type',Partition,'Used (%)','Total Size','Free Space','Free (%)'
+$partition_table_selection = $partition_table | Sort Computer,Drive | Select-Object Computer,Drive,Label,'File System','Boot Partition',Interface,'Media Type','Partition Type',Partition,Used,'Used (%)','Free Space Status','Total Size','Free Space','Free (%)'
+$partition_table_selection_screen = $partition_table | Sort Computer,Drive | Select-Object Computer,Drive,Label,Interface,'Media Type',Partition,'Used (%)','Total Size','Free Space','Free (%)'
 $partition_table_header = 'Partition Table'
 Write-Output $partition_table_header 
 $separator | Out-String 
@@ -418,8 +420,8 @@ $empty_line | Out-String
 
 
 # Display the used drive-letters in console
-$used_selection = $obj_used | Select-Object Computer,Drive,Label,'File System','Media Type','Is Ready',Used,'Used (%)','Total Size','Free Space','Free (%)',Root
-$used_selection_screen = $obj_used | Select-Object Computer,Drive,Label,'File System','Media Type',Used,'Used (%)','Total Size','Free Space','Free (%)'
+$used_selection = $obj_used | Sort Computer,Drive | Select-Object Computer,Drive,Label,'File System','Media Type','Is Ready',Used,'Used (%)','Total Size','Free Space','Free (%)',Root
+$used_selection_screen = $obj_used | Sort Computer,Drive | Select-Object Computer,Drive,Label,'File System','Media Type',Used,'Used (%)','Total Size','Free Space','Free (%)'
 $used_header = 'Drive Letters in Use'
 Write-Output $used_header
 $separator | Out-String
@@ -429,8 +431,8 @@ $empty_line | Out-String
 
 
 # Display the volumes in console
-$volumes_selection = $obj_volumes | Select-Object Computer,Drive,Label,'File System','System Volume','Boot Volume','Indexing Enabled','PageFile Present','Block Size','Compressed','Automount',Used,'Used (%)','Total Size','Free Space','Free (%)'
-$volumes_selection_screen = $obj_volumes | Select-Object Computer,Drive,Label,'File System','System Volume',Used,'Used (%)','Total Size','Free Space','Free (%)'
+$volumes_selection = $obj_volumes | Sort Computer,Drive | Select-Object Computer,Drive,Label,'File System','System Volume','Boot Volume','Indexing Enabled','PageFile Present','Block Size','Compressed','Automount',Used,'Used (%)','Total Size','Free Space','Free (%)'
+$volumes_selection_screen = $obj_volumes | Sort Computer,Drive | Select-Object Computer,Drive,Label,'File System','System Volume',Used,'Used (%)','Total Size','Free Space','Free (%)'
 $volumes_header = 'Volumes'
 Write-Output $volumes_header
 $separator | Out-String
@@ -575,7 +577,10 @@ $env:temp\used_drive_letters.csv            : CSV-file                : used_dri
 .NOTES
 Please note that the two files are created in a directory, which is specified with the 
 $path variable (at line 10). The $env:temp variable points to the current temp folder. 
-The default value of the $env:temp variable is C:\Temp. 
+The default value of the $env:temp variable is C:\Users\<username>\AppData\Local\Temp
+(i.e. each user account has their own separate temp folder at path %USERPROFILE%\AppData\Local\Temp). 
+To change the temp folder for instance to C:\Temp, please, for example, follow the instructions at 
+http://www.eightforums.com/tutorials/23500-temporary-files-folder-change-location-windows.html 
 
     Homepage:           https://github.com/auberginehill/get-unused-drive-letters
     Version:            1.0
