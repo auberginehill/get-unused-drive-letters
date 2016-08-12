@@ -73,7 +73,7 @@
         <th>:arrow_right:</th>
         <td style="padding:6px">
             <ul>
-                <li>Displays general computer information (such as Computer Name, Manufacturer, Computer Model, System Type, CPU, Operating System, Architecture, SP Version, Memory, Processors, Country Code, Install Date, Last BootUp, UpTime, Date, Daylight Bias, Time Offset (Current), Time Offset (Normal), Time (Current), Time (Normal), Daylight In Effect, Time Zone, OS Version, BIOS Version, Serial Number (BIOS), Serial Number (OS), UUID), a list of optical drives, a partition table, volumes list and the used and unused drive letters in console. In addition to that... </li>
+                <li>Displays general computer information (such as Computer Name, Manufacturer, Computer Model, System Type, CPU, Operating System, Architecture, SP Version, Build Number, Memory, Processors, Cores, Country Code, Install Date, Last BootUp, UpTime, Date, Daylight Bias, Time Offset (Current), Time Offset (Normal), Time (Current), Time (Normal), Daylight In Effect, Time Zone, OS Version, BIOS Version, Serial Number (BIOS), Serial Number (OS), UUID), a list of optical drives, a partition table, volumes list and the used and unused drive letters in console. In addition to that... </li>
             </ul>
         </td>
     </tr>
