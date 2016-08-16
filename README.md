@@ -313,7 +313,7 @@
     </tr>
     <tr>
         <th rowspan="5"></th>
-        <td style="padding:6px">Stéphane van Gulick: <a href="https://gallery.technet.microsoft.com/Get-WindowsUpdates-06eb7f43">Get-WindowsUpdates</a></td>
+        <td style="padding:6px"><a href="https://github.com/auberginehill/list-windows-updates">List-WindowsUpdates</a></td>
     </tr>
     <tr>
         <td style="padding:6px"></td>
