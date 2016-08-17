@@ -313,10 +313,10 @@
     </tr>
     <tr>
         <th rowspan="5"></th>
-        <td style="padding:6px"><a href="https://github.com/auberginehill/list-windows-updates">List-WindowsUpdates</a></td>
+        <td style="padding:6px"><a href="https://github.com/auberginehill/get-ram-info">Get-RAMInfo</a></td>
     </tr>
     <tr>
-        <td style="padding:6px"></td>
+        <td style="padding:6px"><a href="https://github.com/auberginehill/list-windows-updates">List-WindowsUpdates</a></td>
     </tr>
     <tr>
         <td style="padding:6px"></td>
