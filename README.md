@@ -329,13 +329,13 @@
         <td style="padding:6px"><a href="https://github.com/auberginehill/get-computer-info">Get-ComputerInfo</a></td>
     </tr>
     <tr>
+        <td style="padding:6px"><a href="https://github.com/auberginehill/get-installed-windows-updates">Get-InstalledWindowsUpdates</a></td>  
+    </tr>
+    <tr>
         <td style="padding:6px"><a href="https://github.com/auberginehill/get-ram-info">Get-RAMInfo</a></td> 
     </tr>
     <tr>
         <td style="padding:6px"><a href="https://gist.github.com/auberginehill/eb07d0c781c09ea868123bf519374ee8">Get-TimeDifference</a></td>  
-    </tr>
-    <tr>
-        <td style="padding:6px"><a href="https://github.com/auberginehill/list-windows-updates">List-WindowsUpdates</a></td>
     </tr>
     <tr>
         <td style="padding:6px"></td>
