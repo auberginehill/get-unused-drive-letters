@@ -279,7 +279,7 @@
         <td style="padding:6px"><a href="https://github.com/auberginehill/get-unused-drive-letters">Script Homepage</a></td>
     </tr>
     <tr>
-        <th rowspan="8"></th>
+        <th rowspan="11"></th>
         <td style="padding:6px">ps1 and Sylvain LESIRE: <a href="http://powershell.com/cs/blogs/tips/archive/2009/01/15/enumerating-drive-letters.aspx">Enumerating Drive Letters</a></td>
     </tr>
     <tr>
