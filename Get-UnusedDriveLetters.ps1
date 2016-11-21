@@ -668,7 +668,8 @@ to C:\Temp, please, for example, follow the instructions at
 http://www.eightforums.com/tutorials/23500-temporary-files-folder-change-location-windows.html
 
     Homepage:           https://github.com/auberginehill/get-unused-drive-letters
-    Version:            1.2
+    Short URL:          http://tinyurl.com/zuejxph    
+    Version:            1.3
 
 .EXAMPLE
 ./Get-UnusedDriveLetters
